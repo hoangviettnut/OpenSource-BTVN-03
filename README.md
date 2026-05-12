@@ -96,7 +96,7 @@ Thêm cấu hình Nginx cho BTVN 03:
             proxy_set_header Host $host;
             proxy_set_header X-Real-IP $remote_addr;
             proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-            proxy_set_header X-Forwarded-Proto $scheme;
+            proxy_set_header X-Forwarded-Proto https;
         }
     }
 ```
@@ -112,15 +112,62 @@ docker exec -it nginx-master nginx -s reload
 Truy cập http://btvn03.luonghoangviet.io.vn, điền tên web, tạo admin và hoàn tất cài đặt.
 
 Giao diện ban đầu khi bắt đầu thiết lập:
+
 <img width="1920" height="1140" alt="image" src="https://github.com/user-attachments/assets/7fdd42d6-e80f-4747-b0f2-bbb5156c5871" />
+
 Sau khi chọn ngôn ngữ, chuyển tiếp vào trang thiết lập Username và Password:
+
 <img width="1920" height="1140" alt="image" src="https://github.com/user-attachments/assets/21d3f450-43da-49f3-9b25-857b6b614a21" />
+
 Truy cập vào Dashboard: btvn03.luonghoangviet.io.vn/wp-admin/ để bắt đầu tạo trang web
+
 <img width="1920" height="1140" alt="image" src="https://github.com/user-attachments/assets/add6304f-849e-4333-8c92-b0fcfe135ddd" />
 
-### a) Tạo bài viết giới thiệu bản thân
+## 6. Tạo bài viết giới thiệu bản thân
+
 Tại dashboard user có thể Custom cho trang web của mình
-Sau khi chọn template ưng ý (hoặc Custom ):
+
+Sau khi chọn template ưng ý (hoặc Custom ): 
+
+Chọn Post => Add Post và điền thông tin, ảnh,... để tạo bài viết: 
+
+Giao diện khi đang edit
+
+<img width="1920" height="1140" alt="image" src="https://github.com/user-attachments/assets/9c1142c2-242c-4fa1-85e4-af6c8395ec47" />
+
+Sau khi Public, truy cập https://btvn03.luonghoangviet.io.vn/2026/05/12/luonghoangviet/ để kiểm tra:
+
+<img width="1920" height="1140" alt="image" src="https://github.com/user-attachments/assets/618329d2-a944-4a84-8b8c-94495b1ca780" />
+
+Kiểm tra trên điện thoại bằng 4G: 
+
+<img width="1260" height="2800" alt="test1" src="https://github.com/user-attachments/assets/f0398b19-d218-4608-bba8-f6cb572d1872" />
+
+## 7. Viết bài Giới thiệu Ngành học 
+
+Tương tự với post giới thiệu bản thân, sau khi thêm các thành phần mà bản thân muốn rồi publish, truy cập https://btvn03.luonghoangviet.io.vn/2026/05/12/ktmt/ để kiểm tra:
+
+<img width="1920" height="1140" alt="image" src="https://github.com/user-attachments/assets/d0fb7795-77d4-427e-8ad6-e9ebd5bf0a64" />
+
+Kiểm tra trên điện thoại bằng 4G:
+
+<img width="1260" height="2800" alt="test2" src="https://github.com/user-attachments/assets/789d83c8-26e0-4380-918e-e8d03bea17e3" />
+
+## 8. Nhận xét
+
+  Về công sức triển khai: Rất nhanh nếu chỉ chạy nội bộ bằng Docker Compose. Tuy nhiên, khi public ra Internet qua cấu trúc Nginx Reverse Proxy và Cloudflare Tunnel thì khá tốn công sức để fix các lỗi giao thức mạng (như lỗi Mixed Content hay nghẽn REST API khi đăng bài).
+
+  Về độ Dễ/Khó sử dụng: Giao diện quản trị (UI) cực kỳ thân thiện, dễ kéo thả, chèn ảnh/video bằng vài cú click chuột. Tuy nhiên, với dân kỹ thuật, khi hệ thống ẩn giấu lỗi sâu bên trong code hoặc Database thì việc debug (tìm và sửa lỗi) khá lằng nhằng và vất vả.
+
+  Về tiêu tốn tài nguyên máy chủ: WordPress khá "ăn" tài nguyên. Một cụm container gồm WordPress (chạy Apache/PHP) và MariaDB ngốn kha khá RAM và CPU của máy chủ Ubuntu so với các trang web code thuần. Nếu lạm dụng cài nhiều giao diện và Plugin nặng, server sẽ rất dễ bị đuối sức.
+
+
+
+
+
+
+
+
 
 
 
