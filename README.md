@@ -104,7 +104,29 @@ Thêm Subdomain trên Cloudflare:
 
 <img width="1057" height="772" alt="image" src="https://github.com/user-attachments/assets/256f60fc-462a-4ac6-8556-e5582077c877" />
 
-Sau đó dùng lệnh:
+Sau đó dùng lệnh tại nơi chứa nginx.conf:
 ```
 docker exec -it nginx-master nginx -s reload
 ```
+## 5. Thiết lập WordPress ban đầu
+Truy cập http://btvn03.luonghoangviet.io.vn, điền tên web, tạo admin và hoàn tất cài đặt.
+
+Giao diện ban đầu khi bắt đầu thiết lập:
+<img width="1920" height="1140" alt="image" src="https://github.com/user-attachments/assets/7fdd42d6-e80f-4747-b0f2-bbb5156c5871" />
+Sau khi chọn ngôn ngữ, chuyển tiếp vào trang thiết lập Username và Password:
+<img width="1920" height="1140" alt="image" src="https://github.com/user-attachments/assets/21d3f450-43da-49f3-9b25-857b6b614a21" />
+Truy cập vào Dashboard: btvn03.luonghoangviet.io.vn/wp-admin/ để bắt đầu tạo trang web
+<img width="1920" height="1140" alt="image" src="https://github.com/user-attachments/assets/add6304f-849e-4333-8c92-b0fcfe135ddd" />
+
+### a) Tạo bài viết giới thiệu bản thân
+Tại dashboard user có thể Custom cho trang web của mình
+Sau khi chọn template ưng ý (hoặc Custom ):
+
+
+
+
+
+
+
+
+
