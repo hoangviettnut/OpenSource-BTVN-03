@@ -64,7 +64,7 @@ docker compose up -d
 ## 4. Cấu hình Nginx & Public mạng
 Thêm cấu hình Nginx cho BTVN 03:
 ```
-    # --- BTVN 03: WORDPRESS ---
+            # --- BTVN 03: WORDPRESS ---
     
     # 6. Web WordPress
     server {
@@ -79,11 +79,11 @@ Thêm cấu hình Nginx cho BTVN 03:
             proxy_set_header Host $host;
             proxy_set_header X-Real-IP $remote_addr;
             proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-            proxy_set_header X-Forwarded-Proto $scheme;
+            proxy_set_header X-Forwarded-Proto https;
         }
     }
 
-    # 7. Giao diện phpMyAdmin 
+    # 7. Giao diện phpMyAdmin (tuỳ chọn nếu thầy muốn xem)
     server {
         listen 80;
         server_name pma03.luonghoangviet.io.vn;
@@ -96,7 +96,7 @@ Thêm cấu hình Nginx cho BTVN 03:
             proxy_set_header Host $host;
             proxy_set_header X-Real-IP $remote_addr;
             proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-            proxy_set_header X-Forwarded-Proto https;
+            proxy_set_header X-Forwarded-Proto $scheme;
         }
     }
 ```
