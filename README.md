@@ -58,6 +58,8 @@ networks:
 ```
 docker compose up -d
 ```
+<img width="461" height="136" alt="image" src="https://github.com/user-attachments/assets/7150a278-6eda-4a8f-9b37-b1b8b4827f36" />
+
 
 ## 4. Cấu hình Nginx & Public mạng
 Thêm cấu hình Nginx cho BTVN 03:
@@ -97,4 +99,12 @@ Thêm cấu hình Nginx cho BTVN 03:
             proxy_set_header X-Forwarded-Proto $scheme;
         }
     }
+```
+Thêm Subdomain trên Cloudflare:
+
+<img width="1057" height="772" alt="image" src="https://github.com/user-attachments/assets/256f60fc-462a-4ac6-8556-e5582077c877" />
+
+Sau đó dùng lệnh:
+```
+docker exec -it nginx-master nginx -s reload
 ```
