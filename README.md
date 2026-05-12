@@ -121,7 +121,7 @@ Sau khi chọn ngôn ngữ, chuyển tiếp vào trang thiết lập Username v�
 
 Khi cài đặt xong truy cập https://btvn03.luonghoangviet.io.vn/ ta được giao diện ban đầu khi chưa có bài viết nào ( chỉ có những bài mặc định )
 
-<img width="1260" height="2800" alt="test" src="https://github.com/user-attachments/assets/2ca7d832-04be-4993-a293-e1075da4efb2" />
+<img width="1920" height="1093" alt="start" src="https://github.com/user-attachments/assets/7e702bf1-39cf-46fa-aa4e-715453fad494" />
 
 Truy cập vào Dashboard: btvn03.luonghoangviet.io.vn/wp-admin/ để bắt đầu tạo trang web
 
