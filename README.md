@@ -119,13 +119,17 @@ Sau khi chọn ngôn ngữ, chuyển tiếp vào trang thiết lập Username v�
 
 <img width="1920" height="1140" alt="image" src="https://github.com/user-attachments/assets/21d3f450-43da-49f3-9b25-857b6b614a21" />
 
+Khi cài đặt xong truy cập https://btvn03.luonghoangviet.io.vn/ ta được giao diện ban đầu khi chưa có bài viết nào ( chỉ có những bài mặc định )
+
+<img width="1260" height="2800" alt="test" src="https://github.com/user-attachments/assets/2ca7d832-04be-4993-a293-e1075da4efb2" />
+
 Truy cập vào Dashboard: btvn03.luonghoangviet.io.vn/wp-admin/ để bắt đầu tạo trang web
 
 <img width="1920" height="1140" alt="image" src="https://github.com/user-attachments/assets/add6304f-849e-4333-8c92-b0fcfe135ddd" />
 
 ## 6. Tạo bài viết giới thiệu bản thân
 
-Tại dashboard user có thể Custom cho trang web của mình
+Tại dashboard user có thể Custom cho trang web, bài viết của mình
 
 Sau khi chọn template ưng ý (hoặc Custom ): 
 
@@ -145,6 +149,8 @@ Kiểm tra trên điện thoại bằng 4G:
 
 ## 7. Viết bài Giới thiệu Ngành học 
 
+## NOTE: Vì mới tìm hiểu về WordPress nên sẽ sử dụng nhúng Video thông qua URL thay vì upload vì hiện tại video đang bị giới hạn kích thước Upload
+
 Tương tự với post giới thiệu bản thân, sau khi thêm các thành phần mà bản thân muốn rồi publish, truy cập https://btvn03.luonghoangviet.io.vn/2026/05/12/ktmt/ để kiểm tra:
 
 <img width="1920" height="1140" alt="image" src="https://github.com/user-attachments/assets/d0fb7795-77d4-427e-8ad6-e9ebd5bf0a64" />
@@ -153,7 +159,19 @@ Kiểm tra trên điện thoại bằng 4G:
 
 <img width="1260" height="2800" alt="test2" src="https://github.com/user-attachments/assets/789d83c8-26e0-4380-918e-e8d03bea17e3" />
 
-## 8. Nhận xét
+## 8. Kiểm tra btvn03.luonghoangviet.io.vn sau khi đã tạo các bài viết
+
+Truy cập https://btvn03.luonghoangviet.io.vn/ để xem danh sách các bài viết: 
+
+<img width="1920" height="1140" alt="image" src="https://github.com/user-attachments/assets/7af3d56a-70a4-40af-9e71-ba1efcd51fe3" />
+
+Test trên điện thoại: 
+
+<img width="1260" height="2800" alt="test" src="https://github.com/user-attachments/assets/1ae911f2-00fb-419d-b657-124a30fa293c" />
+
+Lúc này ta có thể xem các bài viết đã được đăng ( xem chi tiết thì bấm vào bài viết cần xem)
+
+## 9. Nhận xét
 
   Về công sức triển khai: Rất nhanh nếu chỉ chạy nội bộ bằng Docker Compose. Tuy nhiên, khi public ra Internet qua cấu trúc Nginx Reverse Proxy và Cloudflare Tunnel thì khá tốn công sức để fix các lỗi giao thức mạng (như lỗi Mixed Content hay nghẽn REST API khi đăng bài).
 
